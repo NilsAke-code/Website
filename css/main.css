@@ -51,6 +51,12 @@ body {
   font-size: 16px;
 }
 
+.wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
 a {
   color: var(--color-primary);
   text-decoration: none;
@@ -60,8 +66,8 @@ a:hover {
   text-decoration: underline;
 }
 
-.btn-primary {
-  background-color:var(--color-primary);
+.btn-Gradient {
+  background: linear-gradient(0deg, #6366F1 0%, #8B5CF6 50%, #D946EF 100%);
   color: var(--color-white);
   border-radius: 8px;
   padding: 12px 25px;
@@ -70,12 +76,13 @@ a:hover {
   align-items: center;
   text-decoration: none;
 }
-.btn-primary:hover {
-  background-color: var(--color-gray600);
+.btn-Gradient:hover {
+  background: linear-gradient(0deg, #6366F1 0%, #8B5CF6 50%, #D946EF 100%);
   color: var(--color-white);
   text-decoration: none;
+  transform: scale(1.01);
 }
-.btn-primary i {
+.btn-Gradient i {
   margin-right: 0.5rem;
 }
 
@@ -180,6 +187,22 @@ header .container {
   padding-bottom: 1rem;
 }
 
+footer {
+  font-size: 14px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: var(--color-gray600);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+  }
+}
+
+
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
@@ -189,8 +212,15 @@ header .container {
     display: block;
   }
   header .container {
-    gap: 3rem;
+    gap: 5rem;
   }
+  footer {
+    .credit {
+      display: block;
+    }
+    .container {
+      flex-direction:row;
+    }
 }
 
 @media (min-width: 1400px) {
